@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Disorder Prediction</title>
+</head>
+<body>
+    <h1>Predict Your Sleep Disorder</h1>
+    <p>Enter the details</p>
+    <form action="/" method="POST">
+        <input type="text" name="gender" placeholder="Gender" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="number" name="sd" placeholder="Sleep Duration" required>
+        <input type="number" name="qos" placeholder="Quality of Sleep" required>
+        <input type="number" name="physical_activity" placeholder="Physical Activity Level" required>
+        <input type="number" name="stress" placeholder="Stress Level" required>
+        <input type="text" name="bmi" placeholder="BMI" required>
+        <input type="text" name="Blood_Pressure" placeholder="Blood Pressure" required>
+        <input type="number" name="Heart_Rate" placeholder="Heart Rate" required>
+        <input type="number" name="Daily_Steps" placeholder="Daily Steps" required>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if disorder is not none %}
+        <h2>Prediction Result:</h2>
+        <p>{{ disorder }}</p>
+    {% endif %}
+</body>
+</html>
